@@ -26,6 +26,7 @@ class Main extends CI_Controller {
             exit;
         }
         $this->load->view('main');
+        }
     }
 
 }
