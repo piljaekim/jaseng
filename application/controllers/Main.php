@@ -24,8 +24,9 @@ class Main extends CI_Controller {
         if (!$this->session->userdata['ID']) {
             alert('로그인 후 사용 가능 합니다.', '/index.php/login');
             exit;
+        }else{
+            $this->load->view('main');
         }
-        $this->load->view('main');
     }
 
 }
