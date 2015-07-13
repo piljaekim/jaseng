@@ -213,7 +213,8 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 			$insert_data = array(
 				'id' => $session_id,
 				'ip_address' => $_SERVER['REMOTE_ADDR'],
-				'timestamp' => time(),
+				'last_activity' => time(),
+                                'user_agent' => $_SERVER['HTTP_USER_AGENT'],
 				'data' => ($this->_platform === 'postgre' ? base64_encode($session_data) : $session_data)
 			);
 
@@ -232,7 +233,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 			$this->_db->where('ip_address', $_SERVER['REMOTE_ADDR']);
 		}
 
-		$update_data = array('timestamp' => time());
+		$update_data = array('last_activity' => time());
 		if ($this->_fingerprint !== md5($session_data))
 		{
 			$update_data['data'] = ($this->_platform === 'postgre')
@@ -305,7 +306,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 */
 	public function gc($maxlifetime)
 	{
-		return $this->_db->delete($this->_config['save_path'], 'timestamp < '.(time() - $maxlifetime));
+		return $this->_db->delete($this->_config['save_path'], 'last_activity < '.(time() - $maxlifetime));
 	}
 
 	// ------------------------------------------------------------------------
