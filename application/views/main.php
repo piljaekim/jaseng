@@ -35,7 +35,7 @@
                 <table style="display: block; margin: 0 35%;">
                     <tr>
                         <td>
-                            영상제작 목록 업로드
+                            영상제작 목록 업로드.
                         </td>
                         <td>
                             <input type="file" name="videoExcelUpFile">
