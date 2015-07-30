@@ -28,7 +28,7 @@
     </head>
     <body>
         <div id="container">
-            <a href="/index.php/main" style="cursor: pointer;">메인</a>
+            <a href="/index.php/main" style="cursor: pointer;">메인.</a>
             <a href="/index.php/classificationCode" style="cursor: pointer;">분류코드관리</a>
             <a href="/index.php/countryCode" style="cursor: pointer;">국가코드관리</a>
             <a href="/index.php/calendar_lib/index/" style="cursor: pointer;">켈린더</a>
