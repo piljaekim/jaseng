@@ -18,5 +18,11 @@ class Login extends CI_Controller {
         $this->load->view('loginForm');
     }
     
+    function logout() {
+        $this->session->sess_destroy();
+        alert('로그아웃 되었습니다.', '/index.php/login');
+        exit;
+    }
+    
 }
 ?>

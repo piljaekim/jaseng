@@ -367,9 +367,9 @@ $config['encryption_key'] = 'JASENG';
 //$config['sess_time_to_update'] = 300;
 //$config['sess_regenerate_destroy'] = FALSE;
 $config['sess_cookie_name']		= 'ci_session';
-$config['sess_expiration']		= 7200;
+$config['sess_expiration']		= 0; //브라우저 닫을시 로그아웃 시키기위해 7200->0 수정함
 //$config['sess_expire_on_close']	= FALSE;
-$config['sess_expire_on_close']	= TRUE;
+$config['sess_expire_on_close']	= TRUE; //브라우저 닫을시 로그아웃 시키기위해
 //$config['sess_encrypt_cookie']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;
 //$config['sess_use_database']	= FALSE;
@@ -397,8 +397,8 @@ $config['sess_time_to_update']	= 300;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= 'my_';
-//$config['cookie_prefix']	= '';
+//$config['cookie_prefix']	= 'my_';
+$config['cookie_prefix']	= '';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;

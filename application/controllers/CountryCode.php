@@ -17,7 +17,8 @@ class CountryCode extends CI_Controller {
         
         $sql = "SELECT COUNTRY_CODE_IDX, COUNTRY_CODE, CODE_NAME, IS_USE
                     FROM 
-                COUNTRY_CODE";
+                COUNTRY_CODE
+                ORDER BY CODE_NAME ASC";
         $data['list'] = $this->Db_m->getList($sql, 'JASENG');
         
         $this->load->view('countryCode', $data);

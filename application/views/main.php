@@ -31,6 +31,8 @@
             <a href="/index.php/main" style="cursor: pointer;">메인</a>
             <a href="/index.php/classificationCode" style="cursor: pointer;">분류코드관리</a>
             <a href="/index.php/countryCode" style="cursor: pointer;">국가코드관리</a>
+            <a href="/index.php/calendar_lib/index/" style="cursor: pointer;">켈린더</a>
+            <a href="/index.php/login/logout" style="cursor: pointer;">로그아웃</a>
             <form style="display: block; height: 100%; width: 100%;" method="post" enctype="multipart/form-data" action="/index.php/excel/videoDataLoadExcel">
                 <table style="display: block; margin: 0 35%;">
                     <tr>
@@ -76,6 +78,21 @@
                     </tr>
                 </table>
             </form>
+            <form style="display: block; height: 100%; width: 100%;" method="post" enctype="multipart/form-data" action="/index.php/excel/foreignPatentDataLoadExcel">
+                <table style="display: block; margin: 0 35%;">
+                    <tr>
+                        <td>
+                            해외특허 목록 업로드
+                        </td>
+                        <td>
+                            <input type="file" name="foreignPatentExcelUpFile">
+                        </td>
+                        <td>
+                            <input type="submit" value="미리보기">
+                        </td>
+                    </tr>
+                </table>
+            </form>
             <form style="display: block; height: 100%; width: 100%;" method="post" enctype="multipart/form-data" action="/index.php/excel/domesticBrandsDataLoadExcel">
                 <table style="display: block; margin: 0 35%;">
                     <tr>
@@ -84,6 +101,21 @@
                         </td>
                         <td>
                             <input type="file" name="domesticBrandsExcelUpFile">
+                        </td>
+                        <td>
+                            <input type="submit" value="미리보기">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form style="display: block; height: 100%; width: 100%;" method="post" enctype="multipart/form-data" action="/index.php/excel/foreignBrandsDataLoadExcel">
+                <table style="display: block; margin: 0 35%;">
+                    <tr>
+                        <td>
+                            해외상표 목록 업로드
+                        </td>
+                        <td>
+                            <input type="file" name="foreignBrandsExcelUpFile">
                         </td>
                         <td>
                             <input type="submit" value="미리보기">

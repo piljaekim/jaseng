@@ -38,6 +38,7 @@
                     <input type="hidden" name="totalRows" value="<?= $total_rows?>">
                     <?php 
                         $i = 0;
+                        $j = 0;
                         foreach ($sheetData_a as $row) { 
                     ?>
                     <tr>
@@ -46,9 +47,6 @@
                         </td>
                         <td>
                             <input type="hidden" name="col_A[][]" value="<?=$row['A'] ?>">
-                            <?php if($row['A']){?>
-                            <input type="hidden" name="col_A1[]" value="<?=$row['A'] ?>">
-                            <?php }?>
                             <?=$row["A"]?>
                         </td>
                         <td>

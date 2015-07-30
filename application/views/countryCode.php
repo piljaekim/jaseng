@@ -99,6 +99,8 @@
             <a href="/index.php/main" style="cursor: pointer;">메인</a>
             <a href="/index.php/classificationCode" style="cursor: pointer;">분류코드관리</a>
             <a href="/index.php/countryCode" style="cursor: pointer;">국가코드관리</a>
+            <a href="/index.php/calendar_lib/index/" style="cursor: pointer;">켈린더</a>
+            <a href="/index.php/login/logout" style="cursor: pointer;">로그아웃</a>
             <table style="display: block; margin: 0 35%; text-align: center;" border="1">
                 <tr>
                     <td>코드번호</td>
